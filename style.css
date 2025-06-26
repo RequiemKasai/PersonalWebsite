@@ -1,0 +1,106 @@
+/* Reset & General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #101010;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+/* Left and Right Navigation (Full Height) */
+.side-nav {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-left {
+  border-right: 1px solid #333;
+}
+
+.nav-right {
+  border-left: 1px solid #333;
+}
+
+.arrow {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #00ffff;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.side-nav:hover .arrow {
+  color: #00ff88;
+  transform: rotate(180deg) scale(1.2);
+}
+
+/* Main Layout Fills Full Area */
+.main-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header at Top */
+header {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  color: #00ffff;
+}
+
+/* Main in Center */
+main {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+  text-align: center;
+}
+
+main p, main li {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  max-width: 900px;
+}
+
+/* Footer at Bottom */
+footer {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #00aaff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.1rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
